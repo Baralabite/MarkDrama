@@ -1,7 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueAnalytics from 'vue-analytics';
 
 import routes from './routes';
+
+Vue.use(VueAnalytics, {
+  id: 'UA-111637036-2',
+});
 
 Vue.use(VueRouter);
 

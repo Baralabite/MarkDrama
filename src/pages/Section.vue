@@ -85,6 +85,7 @@
 </template>
 
 <script>
+import { page } from 'vue-analytics';
 import MarkDrama from '../markdrama';
 
 export default {
@@ -94,6 +95,9 @@ export default {
       tab: 1,
       MarkDrama,
     };
+  },
+  mounted() {
+    page(this.$route.path);
   },
   computed: {
     getScenes() {

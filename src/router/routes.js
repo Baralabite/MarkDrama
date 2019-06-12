@@ -1,10 +1,11 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/PhoneLayout.vue'),
+    redirect: '/section/1',
+    /* component: () => import('layouts/PhoneLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
-    ],
+    ], */
   },
   {
     path: '/section',
