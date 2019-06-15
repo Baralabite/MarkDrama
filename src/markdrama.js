@@ -173,4 +173,195 @@ export default {
       },
     ],
   },
+  4: {
+    name: 'The Cost',
+    sectionID: 4,
+    passage: 'Mark 8:31 - 10:52',
+    scenes: [
+      {
+        name: 'A',
+        order: 4,
+        content: [
+          'First prediction',
+          'The call to discipleship',
+          'The transfiguration',
+          'Jesus drives out an evil spirit',
+        ],
+      },
+      {
+        name: 'B.1',
+        order: 1,
+        content: [
+          'a Section prediction',
+        ],
+      },
+      {
+        name: 'B.2',
+        order: 2,
+        content: [
+          'b "I am the greatest"',
+          'c "We are the only ones"',
+          'd "Sin doesn\'t matter"',
+        ],
+      },
+      {
+        name: 'B.3',
+        order: 3,
+        content: [
+          'd\' Attitude to marriage',
+          'c\' Attitude to children',
+          'b\' Attitude to possessions',
+        ],
+      },
+      {
+        name: 'C',
+        order: 5,
+        content: [
+          'Third prediction',
+          'James and John\'s request',
+          'The healing of blind Bartimeus',
+        ],
+      },
+    ],
+    logic: [
+      {
+        name: 'A+C',
+        text: 'following Jesus (8:34 / 10:52)',
+      },
+      {
+        name: 'Logic B',
+        text: [
+          'a, a\': same pattern',
+          'b, c, d: three mistakes disciples make',
+          'd\', c\', b\': three areas in which disciples should be different',
+        ],
+      },
+    ],
+  },
+  5: {
+    name: 'The Judgement',
+    sectionID: 5,
+    passage: 'Mark 11:1 - 13:37',
+    scenes: [
+      {
+        name: 'A',
+        order: 3,
+        content: [
+          'Jesus enters Jerusalem',
+          'Jesus curses the fig-tree',
+          'Jesus clears the temple',
+          'Jesus teaches lessons about prayer from the fig-tree',
+        ],
+      },
+      {
+        name: 'B.1',
+        order: 1,
+        content: [
+          'a The authority of Jesus questioned',
+          'b The parable of the tenants',
+          'c Paying taxes to Caesar',
+          'd Marriage at the resurrection',
+        ],
+      },
+      {
+        name: 'B.2',
+        order: 2,
+        content: [
+          'd\' The greatest commandment',
+          'c\' A question about the Messiah',
+          'b\' Warning about the teacher of the law',
+          'a\' The widdow\'s offering',
+        ],
+      },
+      {
+        name: 'C',
+        order: 4,
+        content: [
+          'The destruction of the temple and of the world',
+        ],
+      },
+    ],
+    logic: [
+      {
+        name: 'A+C',
+        text: 'fig-tree (11:13 / 13:28)',
+      },
+      {
+        name: 'Logic B',
+        text: [
+          'four incidents with negative listeners',
+          'four incidents with positive listeners',
+        ],
+      },
+    ],
+  },
+  6: {
+    name: 'The Love',
+    sectionID: 6,
+    passage: 'Mark 14:1 - 16:8',
+    scenes: [
+      {
+        name: 'A',
+        order: 5,
+        content: [
+          'Plans against Jesus',
+          'The anointing at Bethany',
+          'Plans against Jesus',
+        ],
+      },
+      {
+        name: 'B.1',
+        order: 1,
+        content: [
+          'a The last supper',
+          'b Jesus predicts Peter\'s denial',
+        ],
+      },
+      {
+        name: 'B.2',
+        order: 2,
+        content: [
+          'c Gethsemane',
+          'd Jesus arrested',
+        ],
+      },
+      {
+        name: 'B.3',
+        order: 3,
+        content: [
+          'd\' Before the Jewish Council',
+          'c\' Peter denies Jesus',
+        ],
+      },
+      {
+        name: 'B.4',
+        order: 4,
+        content: [
+          'b\' Jesus before Pilate',
+          'a\' The crucifixion',
+        ],
+      },
+      {
+        name: 'C',
+        order: 6,
+        content: [
+          'The women at the cross',
+          'The burial of Jesus',
+          'The resurrection',
+        ],
+      },
+    ],
+    logic: [
+      {
+        name: 'A+C',
+        text: 'oil/anointing (14:8 / 16:1)',
+      },
+      {
+        name: 'Logic B',
+        text: [
+          'grouped in pairs',
+        ],
+      },
+    ],
+  },
 };
