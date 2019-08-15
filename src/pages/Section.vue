@@ -43,8 +43,29 @@
       <q-separator/>
 
       <q-card-section>
-      <div class="q-ma-sm">
-        <div class="text-h6">Flow</div>
+        <div class="q-ma-sm flex justify-end">
+          <q-btn
+            color="primary"
+            @click="previous"
+            flat
+          >
+            Back
+          </q-btn>
+          <q-btn
+            color="primary"
+            @click="next"
+          >
+            Next
+          </q-btn>
+        </div>
+      </q-card-section>
+    </q-card>
+
+
+    <q-card class="q-ma-lg page-card">
+      <q-card-section>
+        <div class="q-ma-sm">
+          <div class="text-h6">Flow</div>
           <q-list>
             <q-item
               clickable
@@ -52,32 +73,12 @@
               :key="key">
               <q-item-section>
                 <q-item-label>{{value.name}}</q-item-label>
-                <q-item-label caption>{{value.text}}</q-item-label>
+                <q-item-label v-for="(text, index) in value.text" caption :key="index">
+                  {{ text }}
+                </q-item-label>
               </q-item-section>
             </q-item>
           </q-list>
-        </div>
-      </q-card-section>
-
-      <q-separator/>
-
-      <q-card-section>
-        <div class="q-ma-sm flex justify-end">
-          <q-btn
-            color="primary"
-            @click="tab -= 1"
-            :disable="!hasPreviousScene"
-            flat
-          >
-            Back
-          </q-btn>
-          <q-btn
-            color="primary"
-            @click="tab += 1"
-            :disable="!hasNextScene"
-          >
-            Next
-          </q-btn>
         </div>
       </q-card-section>
     </q-card>
@@ -98,6 +99,25 @@ export default {
   },
   mounted() {
     page(this.$route.path);
+    this.tab = this.getRouteScene;
+  },
+  methods: {
+    previous() {
+      if (this.hasPreviousScene) {
+        this.tab -= 1;
+      } else {
+        if (this.$route.params.sectionID === '1') return;
+        this.$router.push(`/section/${parseInt(this.$route.params.sectionID, 10) - 1}/3`);
+      }
+    },
+    next() {
+      if (this.hasNextScene) {
+        this.tab += 1;
+      } else {
+        if (this.$route.params.sectionID === '6') return;
+        this.$router.push(`/section/${parseInt(this.$route.params.sectionID, 10) + 1}`);
+      }
+    },
   },
   computed: {
     getScenes() {
@@ -113,10 +133,14 @@ export default {
     hasPreviousScene() {
       return !(this.tab === 1);
     },
+    getRouteScene() {
+      if (this.$route.params.scene === undefined) return 1;
+      return parseInt(this.$route.params.scene, 10);
+    },
   },
   watch: {
     '$route.params.sectionID': function () {
-      this.tab = 1;
+      this.tab = this.getRouteScene;
     },
   },
 };

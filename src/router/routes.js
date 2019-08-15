@@ -12,6 +12,7 @@ const routes = [
     component: () => import('layouts/PhoneLayout.vue'),
     children: [
       { path: ':sectionID', component: () => import('pages/Section.vue') },
+      { path: ':sectionID/:scene', component: () => import('pages/Section.vue') },
     ],
   },
 ];

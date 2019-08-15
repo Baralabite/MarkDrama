@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="bg-grey-2">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -36,7 +36,7 @@
       </q-list>
     </q-drawer>
 
-    <div class="bg-grey-2 q-pa-sm" style="height: 100vh">
+    <div>
       <q-page-container>
         <router-view />
       </q-page-container>
