@@ -229,7 +229,7 @@ export default {
           'd\' The greatest commandment',
           'c\' A question about the Messiah',
           'b\' Warning about the teacher of the law',
-          'a\' The widdow\'s offering',
+          'a\' The widow\'s offering',
         ],
       },
       {
